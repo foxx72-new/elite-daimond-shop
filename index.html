@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Fire Top-Up</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="overlay">
+
+    <header>
+
+      <div class="navbar">
+
+        <h1>🔥 FREE FIRE LOW PRICE  TOP-UP</h1>
+
+        <div class="cart-box"
+        onclick="openCart()">
+
+          🛒 Cart :
+          <span id="cart-count">0</span>
+
+        </div>
+
+      </div>
+
+      <p class="subtitle">
+        Instant Delivery • Safe Payment • 50% OFF
+      </p>
+
+    </header>
+
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="cards">
+
+  <!-- CARD 1 -->
+
+  <div class="card">
+
+    <div class="discount">37% OFF</div>
+
+    <img src="photo1.JPG">
+
+    <h2>100 Diamonds</h2>
+
+    <p class="old">₹80</p>
+
+    <p class="price">₹50</p>
+
+    <button class="add-btn"
+    onclick="addToCart('100 Diamonds',40)">
+      Add To Cart
+    </button>
+
+    <button class="buy-btn"
+    onclick="buyNow('100 Diamonds',40)">
+      Buy Now
+    </button>
+
+  </div>
+
+  <!-- CARD 2 -->
+
+  <div class="card">
+
+    <div class="discount">50% OFF</div>
+
+    <img src="photo1.JPG">
+
+    <h2>310 Diamonds</h2>
+
+    <p class="old">₹240</p>
+
+    <p class="price">₹120</p>
+
+    <button class="add-btn"
+    onclick="addToCart('310 Diamonds',120)">
+      Add To Cart
+    </button>
+
+    <button class="buy-btn"
+    onclick="buyNow('310 Diamonds',120)">
+      Buy Now
+    </button>
+
+  </div>
+
+  <!-- CARD 3 -->
+
+  <div class="card">
+
+    <div class="discount">50% OFF</div>
+
+    <img src="photo1.JPG">
+
+    <h2>520 Diamonds</h2>
+
+    <p class="old">₹400</p>
+
+    <p class="price">₹200</p>
+
+    <button class="add-btn"
+    onclick="addToCart('520 Diamonds',200)">
+      Add To Cart
+    </button>
+
+    <button class="buy-btn"
+    onclick="buyNow('520 Diamonds',200)">
+      Buy Now
+    </button>
+
+  </div>
+
+  <!-- CARD 4 -->
+
+  <div class="card">
+
+    <div class="discount">50% OFF</div>
+
+    <img src="photo1.JPG">
+
+    <h2>1060 Diamonds</h2>
+
+    <p class="old">₹800</p>
+
+    <p class="price">₹400</p>
+
+    <button class="add-btn"
+    onclick="addToCart('1060 Diamonds',400)">
+      Add To Cart
+    </button>
+
+    <button class="buy-btn"
+    onclick="buyNow('1060 Diamonds',400)">
+      Buy Now
+    </button>
+
+  </div>
+
+  <!-- CARD 5 -->
+
+  <div class="card">
+
+    <div class="discount">50% OFF</div>
+
+    <img src="photo2.JPG">
+
+    <h2>Weekly Membership</h2>
+
+    <p class="old">₹159</p>
+
+    <p class="price">₹79</p>
+
+    <button class="add-btn"
+    onclick="addToCart('Weekly Membership',79)">
+      Add To Cart
+    </button>
+
+    <button class="buy-btn"
+    onclick="buyNow('Weekly Membership',79)">
+      Buy Now
+    </button>
+
+  </div>
+
+  <!-- CARD 6 -->
+
+  <div class="card">
+
+    <div class="discount">50% OFF</div>
+
+    <img src="photo3.JPG">
+
+    <h2>Monthly Membership</h2>
+
+    <p class="old">₹799</p>
+
+    <p class="price">₹399</p>
+
+    <button class="add-btn"
+    onclick="addToCart('Monthly Membership',399)">
+      Add To Cart
+    </button>
+
+    <button class="buy-btn"
+    onclick="buyNow('Monthly Membership',399)">
+      Buy Now
+    </button>
+
+  </div>
+
+</section>
+
+<!-- CART -->
+
+<div class="cart-page"
+id="cart-page">
+
+  <div class="cart-content">
+
+    <span class="close"
+    onclick="closeCart()">×</span>
+
+    <h2>🛒 Your Cart</h2>
+
+    <div id="cart-items"></div>
+
+    <div class="total-box">
+
+      Total : ₹<span id="total">0</span>
+
+    </div>
+
+    <button class="continue-btn"
+    onclick="showUidSection()">
+
+      Continue
+
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PAYMENT -->
+
+<div class="popup"
+id="popup">
+
+  <div class="popup-box">
+
+    <span class="close"
+    onclick="closePopup()">×</span>
+
+    <!-- UID -->
+
+    <div id="uid-section">
+
+      <h2>Enter Free Fire UID</h2>
+
+      <input type="number"
+      id="uid"
+      placeholder="Enter UID">
+
+      <button onclick="nextPayment()">
+        Continue
+      </button>
+
+    </div>
+
+    <!-- PAYMENT SECTION -->
+
+    <div id="payment-section"
+    style="display:none;">
+
+      <h2>Complete Payment</h2>
+
+      <img src="photo4.JPEG"
+      class="qr">
+
+      <div class="instructions">
+
+        <h3>Payment Instructions</h3>
+
+        <p>1. Scan QR Using GPay / Paytm / PhonePe.</p>
+
+        <p>2. Complete Payment Successfully.</p>
+
+        <p>3. Copy UTR Number.</p>
+
+        <p>4. Paste UTR Correctly Below.</p>
+
+      </div>
+
+      <input type="number"
+      id="utr"
+      placeholder="Enter 12 Digit UTR">
+
+      <button onclick="submitPayment()">
+        Submit Payment
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- LOADER SCREEN -->
+<div id="upi-loader" class="upi-popup">
+  <div class="upi-box">
+    <div class="spinner"></div>
+    <h2>Syncing with UPI Gateway...</h2>
+    <p>Please wait...</p>
+  </div>
+</div>
+
+<!-- INVALID SCREEN -->
+<div id="upi-error" class="upi-popup">
+  <div class="upi-box">
+    <h2 style="color:red;">❌ UTR Invalid</h2>
+    <p>Transaction Failed</p>
+    <button onclick="location.reload()">OK</button>
+  </div>
+</div>
+
+
+
+<footer>
+
+  <p>© 2026 ELITE GEM FF SHOP </p>
+
+</footer>
+
+<script>
+
+let cart = [];
+
+let total = 0;
+
+/* ADD TO CART */
+
+function addToCart(name,price){
+
+cart.push({name,price});
+
+total += price;
+
+document.getElementById("cart-count").innerHTML =
+cart.length;
+
+updateCart();
+
+}
+
+/* UPDATE CART */
+
+function updateCart(){
+
+let cartItems =
+document.getElementById("cart-items");
+
+cartItems.innerHTML = "";
+
+cart.forEach((item,index)=>{
+
+cartItems.innerHTML += `
+
+<div class="cart-item">
+
+<div>
+
+<h4>${item.name}</h4>
+
+<p>₹${item.price}</p>
+
+</div>
+
+<button class="remove-btn"
+onclick="removeItem(${index})">
+
+Remove
+
+</button>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("total").innerHTML =
+total;
+
+}
+
+/* REMOVE ITEM */
+
+function removeItem(index){
+
+total -= cart[index].price;
+
+cart.splice(index,1);
+
+document.getElementById("cart-count").innerHTML =
+cart.length;
+
+updateCart();
+
+}
+
+/* BUY NOW */
+
+function buyNow(name,price){
+
+cart = [];
+
+total = 0;
+
+addToCart(name,price);
+
+document.getElementById("popup").style.display =
+"flex";
+
+}
+
+/* OPEN CART */
+
+function openCart(){
+
+document.getElementById("cart-page").style.display =
+"flex";
+
+}
+
+/* CLOSE CART */
+
+function closeCart(){
+
+document.getElementById("cart-page").style.display =
+"none";
+
+}
+
+/* UID SECTION */
+
+function showUidSection(){
+
+if(cart.length == 0){
+
+alert("Your Cart Is Empty");
+
+return;
+
+}
+
+closeCart();
+
+document.getElementById("popup").style.display =
+"flex";
+
+document.getElementById("uid-section").style.display =
+"block";
+
+document.getElementById("payment-section").style.display =
+"none";
+
+}
+
+/* CLOSE POPUP */
+
+function closePopup(){
+
+document.getElementById("popup").style.display =
+"none";
+
+}
+
+/* UID VALIDATION */
+
+function nextPayment(){
+
+let uid =
+document.getElementById("uid").value;
+
+if(uid.length < 8 || uid.length > 12){
+
+alert("UID Must Be Minimum 8 And Maximum 12 Digits");
+
+}else{
+
+document.getElementById("uid-section").style.display =
+"none";
+
+document.getElementById("payment-section").style.display =
+"block";
+
+}
+
+}
+
+/* PAYMENT */
+
+function submitPayment(){
+
+let utr =
+document.getElementById("utr").value;
+
+if(utr.length != 12){
+
+alert("Enter Valid 12 Digit UTR Number");
+
+}else{
+
+document.getElementById("popup").style.display =
+"none";
+
+document.getElementById("success-page").style.display =
+"flex";
+
+}
+
+}
+
+function submitPayment(){
+
+let utr = document.getElementById("utr").value;
+
+// TEST: agar empty ho
+if(utr === ""){
+alert("Enter UTR");
+return;
+}
+
+// popup hide
+document.getElementById("popup").style.display = "none";
+
+// SHOW LOADER
+document.getElementById("upi-loader").style.display = "flex";
+
+// AFTER 3 SEC SHOW ERROR
+setTimeout(()=>{
+document.getElementById("upi-loader").style.display = "none";
+document.getElementById("upi-error").style.display = "flex";
+},3000);
+
+}
+
+
+
+</script>
+
+</body>
+</html>
